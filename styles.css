@@ -35,6 +35,12 @@ body {
     text-decoration: none;
     padding: 10px 20px;
     display: block;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: gray;
+    border-radius: 5px;
 }
 
 .content {
@@ -62,6 +68,7 @@ body {
 
 .logo {
     width: 50px;
+    animation: animacion-logo 5s infinite linear;
 }
 
 .products h2 {
@@ -73,6 +80,13 @@ body {
     background-color: #e0e0e0;
     padding: 10px;
     margin: 10px 0;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.product:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
 }
 
 .product h3 {
@@ -93,4 +107,9 @@ body {
 .footer a {
     color: #00aced;
     text-decoration: none;
+}
+
+@keyframes animacion-logo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
